@@ -1,0 +1,67 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	overflow-x: hidden;
+}
+
+div.container {
+	width: 90%;
+	max-width: 500px;
+	margin: 50px auto;
+
+	opacity: 0;
+	transform: translateY(-3%);
+
+}
+
+img.circle {
+	border-radius: 50%;
+}
+
+.center-text {
+	text-align: center;
+}
+
+#about > p {
+	text-align: justify;
+	line-height: 1.5em;
+}
+
+#about a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+}
+
+#about ul {
+	list-style-type: none;
+}
+
+#about ul > li {
+	margin-bottom: 10px;
+}
+
+/* Animation */
+
+@keyframes fade-into-view {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+div.container {
+	animation-name: fade-into-view;
+	animation-duration: .4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.6s;
+}

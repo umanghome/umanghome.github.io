@@ -1,0 +1,138 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	overflow-x: hidden;
+}
+
+div.container {
+	width: 90%;
+	max-width: 600px;
+	margin: 50px auto;
+
+	opacity: 0;
+	transform: translateY(-1%);
+}
+
+img.circle {
+	border-radius: 50%;
+}
+
+.center-text {
+	text-align: center;
+}
+
+#skills {
+	margin-top: 50px;
+}
+
+#skills > p {
+	line-height: 1.5em;
+}
+
+#skills a {
+	color: white;
+	text-decoration: none;
+}
+
+#languages, #frameworks {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+	margin: 0 auto;
+}
+
+#languages p, #frameworks p {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+#languages {
+	text-align: right;
+	padding-right: 20px;
+}
+
+#frameworks {
+	border-left: 1px solid white;
+	text-align: left;
+	padding-left: 25px;
+}
+
+#languages h2, #frameworks h2 {
+	display: inline-block;
+	border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 650px) {
+	#languages, #frameworks {
+		width: 100%;
+		border: none;
+		text-align: center;
+		padding: 0;
+	}
+
+	#skills {
+		margin-top: 20px;
+	}
+}
+
+h2.underline {
+	display: inline-block;
+	margin: 0 auto;
+	border-bottom: 1px solid white;
+}
+
+#projects, #experiences {
+	width: 100%;
+	margin: 30px auto 0;
+	text-align: center;
+}
+
+.project-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.project {
+	text-align: center;
+	margin: 10px;
+	vertical-align: top;
+	box-sizing: border-box;
+	padding: 10px;
+	transition: .3s ease-in-out;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.project:hover {
+	border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.project .title {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/* Animation */
+
+@keyframes fade-into-view {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+div.container {
+	animation-name: fade-into-view;
+	animation-duration: .4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.6s;
+}

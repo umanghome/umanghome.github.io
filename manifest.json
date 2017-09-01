@@ -1,13 +1,30 @@
 {
-    "name": "HTTPS a, HTTPS w",
-    "short_name": "HTTPS a, HTTPS w",
-    "icons": [{
-        "src": "/logo_192_by_192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    }],
-    "start_url": "/",
-    "display": "standalone",
-    "gcm_sender_id": "1057112439681",
-    "gcm_user_visible_only": true
+  "short_name": "Umang G",
+  "name": "Umang Galaiya's Website",
+  "icons": [{
+    "src": "umang-20170813.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  }, {
+    "src": "umang-20170813.png",
+    "type": "image/png",
+    "sizes": "152x152"
+  }, {
+    "src": "umang-20170813.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  }, {
+    "src": "umang-20170813.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }, {
+    "src": "umang-20170813.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }],
+  "start_url": "index.html?launcher=true",
+  "background_color": "black",
+  "theme_color": "black",
+  "display": "fullscreen"
 }
+

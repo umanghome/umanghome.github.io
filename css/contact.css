@@ -1,0 +1,113 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	overflow-x: hidden;
+}
+
+div.container {
+	width: 90%;
+	max-width: 500px;
+	margin: 50px auto;
+
+	opacity: 0;
+	transform: translateY(-3%);
+
+}
+
+img.circle {
+	border-radius: 50%;
+}
+
+.center-text {
+	text-align: center;
+}
+
+#text > p {
+	text-align: justify;
+	line-height: 1.5em;
+}
+
+#email {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+	font-size: 1.2em;
+}
+
+.link {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}
+
+.social {
+	height: 2.4em;
+	width: 2.4em;
+	line-height: 2.4em;
+	font-size: 1.2em;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	color: white;
+	margin: 10px;
+}
+
+.social-bg {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: linear 0.15s;
+}
+
+/* Animation */
+
+@keyframes fade-into-view {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes expand-circle {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+div.container {
+	animation-name: fade-into-view;
+	animation-duration: .4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.6s;
+}
+
+.social-bg {
+	animation-name: expand-circle;
+	animation-duration: .2s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.7s;
+}

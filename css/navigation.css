@@ -1,0 +1,21 @@
+.nav-link {
+	display: inline-block;
+	padding: 10px 10px;
+}
+
+.nav-link > a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+}
+
+.nav-link > .border {
+	height: 2px;
+	background: white;
+	width: 0px;
+	transition: 0.15s linear;
+}
+
+.nav-link > a:hover + .border {
+	width: 100%;
+}

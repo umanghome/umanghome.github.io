@@ -1,0 +1,110 @@
+/*ANIMATION*/
+#an-3e {
+	background: #131313;
+}
+
+#an-00 {
+	background: #000000;
+}
+
+.animation {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+
+#an-co {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 100%;
+	width: 100%;
+}
+
+.animation > div > div {
+	height: 1px;
+	width: 1px;
+	content: '';
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+}
+
+#an-3e {
+	animation-name: intro;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+#an-00 {
+	animation-name: intro2;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes intro {
+	0% {
+		width: 0px;
+		height: 1px;
+		top: 50%;
+		transform: rotate(0deg);
+	}
+	30% {
+		width: 180%;
+		height: 1px;
+		left: -25%;
+		top: 50%;
+		transform: rotate(0deg);
+	}
+	50% {
+		width: 180%;
+		height: 1px;
+		top: 50%;
+		transform: rotate(15deg);
+	}
+	100% {
+		width: 180%;
+		height: 100%;
+		left: -28%;
+		top: -50%;
+		transform: rotate(15deg);
+	}
+}
+
+@keyframes intro2 {
+	0% {
+		width: 0px;
+		height: 1px;
+		top: 50%;
+		transform: rotate(0deg);
+	}
+	30% {
+		width: 180%;
+		height: 1px;
+		top: 50%;
+		transform: rotate(0deg);
+	}
+	50% {
+		width: 180%;
+		left: -25%;
+		height: 1px;
+		top: 50%;
+		transform: rotate(15deg);
+	}
+	100% {
+		width: 180%;
+		left: -30%;
+		height: 100%;
+		top: -50%;
+		transform: rotate(15deg);
+	}
+}
+

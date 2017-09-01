@@ -1,0 +1,58 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	overflow-x: hidden;
+}
+
+div.container {
+	/*center horizontally*/
+	width: 90%;
+	max-width: 700px;
+	margin: 0 auto;
+
+	/*center vertically*/
+	position: relative;
+	top: 50%;
+
+	opacity: 0;
+	transform: translateY(-53%);
+}
+
+img.circle {
+	border-radius: 50%;
+}
+
+.center-text {
+	text-align: center;
+}
+
+#umang-img {
+	width: 100%;
+	max-width: 200px;
+	transition: .6s linear;
+}
+
+/* Animation */
+
+@keyframes fade-into-view {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(-50%);
+	}
+}
+
+div.container {
+	animation-name: fade-into-view;
+	animation-duration: .4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.6s;
+}
