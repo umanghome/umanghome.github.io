@@ -2,23 +2,23 @@
   "short_name": "Umang G",
   "name": "Umang Galaiya's Website",
   "icons": [{
-    "src": "umang-20170813.png",
+    "src": "umang-icon.png",
     "type": "image/png",
     "sizes": "128x128"
   }, {
-    "src": "umang-20170813.png",
+    "src": "umang-icon.png",
     "type": "image/png",
     "sizes": "152x152"
   }, {
-    "src": "umang-20170813.png",
+    "src": "umang-icon.png",
     "type": "image/png",
     "sizes": "144x144"
   }, {
-    "src": "umang-20170813.png",
+    "src": "umang-icon.png",
     "type": "image/png",
     "sizes": "192x192"
   }, {
-    "src": "umang-20170813.png",
+    "src": "umang-icon.png",
     "type": "image/png",
     "sizes": "512x512"
   }],
