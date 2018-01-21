@@ -1,3 +1,14 @@
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 .nav-link {
 	display: inline-block;
 	padding: 10px 10px;
