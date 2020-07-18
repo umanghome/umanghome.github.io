@@ -7,6 +7,16 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--dark-blue: #0C141F;
+	--orange: #DF740C;
+	--yellow: #FFE64D;
+	--blue: #00a8ff;
+	--blue-with-opacity: rgba(0, 168, 255, 0.5);
+	--whitish: #f9f9f9;
+	--white: #ffffff;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -15,13 +25,17 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
-	font-family: 'Poppins', sans-serif;
-	color: white;
+	font-family: 'Open Sans', sans-serif;
+	color: var(--whitish);
 	overflow-x: hidden;
 }
 
 h1, h2 {
-	font-family: 'Eczar', serif;
+	font-family: 'Rubik', sans-serif;
+}
+
+.container:not(.home) h1 {
+	border-bottom: 2px solid var(--blue);
 }
 
 div.container {
@@ -68,7 +82,11 @@ p {
 a {
 	color: white;
 	text-decoration: none;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid var(--yellow);
+}
+
+small {
+	color: var(--pane);
 }
 
 /* Utility classes */
@@ -84,13 +102,6 @@ img.circle {
 .strikethrough {
 	text-decoration: line-through;
 }
-
-h2.underline {
-	display: inline-block;
-	margin: 0 auto;
-	border-bottom: 1px solid white;
-}
-
 
 .link-img {
 	border-bottom: none;
@@ -113,16 +124,22 @@ nav ul {
 }
 
 .nav-link > a {
-	color: white;
+	color: #dedede;
 	text-decoration: none;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid var(--orange);
+	transition: color 0.15s linear;
 }
 
 .nav-link > .border {
 	height: 2px;
-	background: white;
+	background: var(--blue);
 	width: 0px;
 	transition: width 0.15s linear;
+}
+
+.nav-link > a:hover,
+.nav-link > a:focus {
+	color: white;
 }
 
 .nav-link > a:hover + .border,
@@ -162,12 +179,9 @@ div.container {
 	animation-delay: 0.8s;
 }
 
-#an-3e {
-	background: #191919;
-}
-
+#an-3e,
 #an-00 {
-	background: #191919;
+	background: var(--dark-blue);
 }
 
 .animation {
@@ -389,7 +403,7 @@ div.container {
 	margin-bottom: 4px;
 	line-height: 1.5em;
 	padding-bottom: 0.5em;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+	border-bottom: 1px solid var(--blue-with-opacity);
 }
 
 #skills, #experiences {
@@ -418,6 +432,26 @@ div.container {
 .project ul {
 	list-style-type: initial;
 	text-align: justify;
+}
+
+.project ul,
+.project p {
+	color: var(--whitish);
+}
+
+.project h3 {
+	position: relative;
+}
+
+.project h3::after {
+	width: 2em;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-bottom: 4px solid var(--orange);
+	z-index: -1;
+	transform: skew(-30deg, 0deg);
 }
 
 .project + .project {
