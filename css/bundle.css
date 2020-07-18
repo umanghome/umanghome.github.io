@@ -118,7 +118,7 @@ nav ul {
 	height: 2px;
 	background: white;
 	width: 0px;
-	transition: 0.15s linear;
+	transition: width 0.15s linear;
 }
 
 .nav-link > a:hover + .border,
@@ -273,7 +273,6 @@ div.container {
 	width: 100%;
 	max-width: 200px;
 	height: auto;
-	transition: .6s linear;
 }
 
 /* /about */
@@ -305,7 +304,7 @@ div.container {
 	z-index: -1;
 	border-radius: 50%;
 	transform: scale(0);
-	transition: linear 0.15s;
+	transition: transform linear 0.15s;
 }
 
 .social-bg {
