@@ -44,6 +44,29 @@ div.container {
 	padding-bottom: 2rem;
 }
 
+ul {
+	list-style-type: none;
+}
+
+ul > li + li {
+	margin-top: 12px;
+}
+
+ul.no-padding {
+	padding: 0;
+}
+
+p {
+	text-align: justify;
+	line-height: 1.5em;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+}
+
 /* Utility classes */
 
 img.circle {
@@ -70,20 +93,6 @@ h2.underline {
 	border-bottom: 1px solid white;
 }
 
-ul {
-	list-style-type: none;
-}
-
-p {
-	text-align: justify;
-	line-height: 1.5em;
-}
-
-a {
-	color: white;
-	text-decoration: none;
-	border-bottom: 1px solid white;
-}
 
 .link-img {
 	border-bottom: none;
@@ -274,9 +283,6 @@ div.container {
 }
 
 /* /about */
-#about ul > li + li {
-	margin-top: 12px;
-}
 
 /* /contact */
 #email {
@@ -365,82 +371,40 @@ div.container {
 }
 
 /* /work */
-
-#skills {
-	margin-top: 50px;
-}
-
-#skills a {
-	border-bottom: none;
-}
-
-#languages, #frameworks {
-	display: inline-block;
-	width: 49%;
-	vertical-align: top;
-	margin: 0 auto;
-}
-
-#languages p, #frameworks p {
-	max-width: 400px;
-	margin: 0 auto;
-}
-
-#languages {
-	text-align: right;
-	padding-right: 20px;
-}
-
-#frameworks {
-	border-left: 1px solid white;
-	text-align: left;
-	padding-left: 25px;
-}
-
-#languages h2, #frameworks h2 {
-	display: inline-block;
-	border-bottom: 1px solid white;
-}
-
-@media screen and (max-width: 650px) {
-	#languages, #frameworks {
-		width: 100%;
-		border: none;
-		text-align: center;
-		padding: 0;
-	}
-
-	#skills {
-		margin-top: 20px;
-	}
-}
-
-#projects, #experiences {
-	width: 100%;
-	margin: 30px auto 0;
-	text-align: center;
-}
-
 .project-link {
 	color: inherit;
 	text-decoration: none;
 }
 
+#skills, #experiences, #projects {
+	width: 100%;
+}
+
 .project {
-	text-align: center;
-	margin: 10px;
-	vertical-align: top;
-	box-sizing: border-box;
-	padding: 10px;
-	transition: .3s ease-in-out;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	width: 100%;
+	border-top: 1px solid white;
 }
 
-.project:hover {
-	border-bottom: 1px solid rgba(255, 255, 255, 1);
+.project h3 {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
-.project .title {
-	margin-top: 0px;
-	margin-bottom: 0px;
+.project ul {
+	list-style-type: initial;
+	text-align: justify;
+}
+
+.project + .project {
+	margin-top: 12px;
+}
+
+.project > *:last-child {
+	margin-bottom: 0;
+}
+
+div > .project:last-of-type {
+	border-bottom: 1px solid white;
 }
