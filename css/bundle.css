@@ -155,7 +155,7 @@ div.container {
 	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
-	animation-delay: 1.6s;
+	animation-delay: 0.8s;
 }
 
 #an-3e {
@@ -195,7 +195,7 @@ div.container {
 
 #an-3e {
 	animation-name: intro;
-	animation-duration: 1.5s;
+	animation-duration: 0.8s;
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
@@ -203,7 +203,7 @@ div.container {
 
 #an-00 {
 	animation-name: intro2;
-	animation-duration: 1.5s;
+	animation-duration: 0.8s;
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
@@ -313,7 +313,7 @@ div.container {
 	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
-	animation-delay: 1.7s;
+	animation-delay: 0.9s;
 }
 
 #linkedin .social-bg {
