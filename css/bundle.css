@@ -77,12 +77,6 @@ img.circle {
 	text-align: center;
 }
 
-a.link {
-	color: white;
-	text-decoration: none;
-	border-bottom: 1px solid white;
-}
-
 .strikethrough {
 	text-decoration: line-through;
 }
@@ -286,9 +280,6 @@ div.container {
 
 /* /contact */
 #email {
-	color: white;
-	text-decoration: none;
-	border-bottom: 1px solid white;
 	font-size: 1.2em;
 }
 
@@ -380,11 +371,20 @@ div.container {
 	width: 100%;
 }
 
+#skills h2, #experiences h2, #projects h2 {
+	margin-bottom: 0;
+	line-height: 2em;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#experiences, #projects {
+	margin-top: 64px;
+}
+
 .project {
-	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-top: 24px;
+	padding-bottom: 24px;
 	width: 100%;
-	border-top: 1px solid white;
 }
 
 .project h3 {
@@ -405,6 +405,17 @@ div.container {
 	margin-bottom: 0;
 }
 
-div > .project:last-of-type {
-	border-bottom: 1px solid white;
+.project a::after {
+	content: '\2192';
+	display: inline-block;
+	position: absolute;
+	margin-left: 6px;
+
+	transform: scaleX(1.2);
+	transition: transform 0.15s linear;
+}
+
+.project a:hover::after,
+.project a:focus::after {
+	transform: scaleX(1.5) translateX(0.1em);
 }
