@@ -377,8 +377,12 @@ div.container {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+#skills {
+	margin-top: 2rem;
+}
+
 #experiences, #projects {
-	margin-top: 64px;
+	margin-top: 4rem;
 }
 
 .project {
