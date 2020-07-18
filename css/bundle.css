@@ -366,22 +366,34 @@ div.container {
 	text-decoration: none;
 }
 
+#skills > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;;
+}
+
+#skills > div > div {
+	flex-grow: 1;
+	flex-basis: 250px;
+}
+
 #skills, #experiences, #projects {
 	width: 100%;
 }
 
 #skills h2, #experiences h2, #projects h2 {
-	margin-bottom: 0;
-	line-height: 2em;
+	margin-bottom: 4px;
+	line-height: 1.5em;
+	padding-bottom: 0.5em;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-#skills {
+#skills, #experiences {
 	margin-top: 2rem;
 }
 
-#experiences, #projects {
-	margin-top: 4rem;
+#projects {
+	margin-top: 3rem;
 }
 
 .project {
@@ -392,6 +404,10 @@ div.container {
 
 .project h3 {
 	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.project h4 {
 	margin-bottom: 0;
 }
 
