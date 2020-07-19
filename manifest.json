@@ -3,24 +3,7 @@
   "name": "Umang Galaiya's Website",
   "icons": [{
     "src": "umang-icon.png",
-    "type": "image/png",
-    "sizes": "128x128"
-  }, {
-    "src": "umang-icon.png",
-    "type": "image/png",
-    "sizes": "152x152"
-  }, {
-    "src": "umang-icon.png",
-    "type": "image/png",
-    "sizes": "144x144"
-  }, {
-    "src": "umang-icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }, {
-    "src": "umang-icon.png",
-    "type": "image/png",
-    "sizes": "512x512"
+    "type": "image/png"
   }],
   "start_url": "index.html?launcher=true",
   "background_color": "black",
