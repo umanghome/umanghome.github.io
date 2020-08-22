@@ -2,6 +2,8 @@ const passthroughCopyItems = [
   'css',
   'img',
   'manifest.json',
+  'sitemap.xml',
+  'umang_galaiya_resume.pdf',
 ];
 
 module.exports = config => {

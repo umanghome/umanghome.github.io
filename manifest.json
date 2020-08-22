@@ -1,0 +1,13 @@
+{
+  "short_name": "Umang G",
+  "name": "Umang Galaiya's Website",
+  "icons": [{
+    "src": "umang-icon.png",
+    "type": "image/png"
+  }],
+  "start_url": "index.html?launcher=true",
+  "background_color": "black",
+  "theme_color": "black",
+  "display": "fullscreen"
+}
+
