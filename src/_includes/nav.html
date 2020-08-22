@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    {%- for page in collections.pages | concat(site.extraNavItems) | allButPage(page) -%}
+      {% set linkTitle = page.data.title %}
+
+      {% if page.data.navTitle %}
+        {% set linkTitle = page.data.navTitle %}
+      {% endif %}
+      <li class="nav-link">
+        <a href="{{ page.url }}">{{ linkTitle }}</a>
+        <div class="border"></div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

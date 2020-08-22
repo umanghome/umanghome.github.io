@@ -1,0 +1,57 @@
+{% set pageKeywords = [] %}
+
+{% if keywords %}
+  {% set pageKeywords = keywords %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="{{ site.theme }}">
+  <link rel="shortcut icon" href="{{ site.favicon }}">
+  <link rel="icon" href="{{ site.favicon }}">
+  <meta name="description" content="{{ description | safe }}" />
+  <meta name="keywords" content="{{ site.keywords | concat(pageKeywords) | join(', ') }}" />
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="og:url" content="{{ site.url + page.url }}" />
+  <meta name="og:title" content="{{ site.name }} | {{ title }}" />
+  <meta name="og:description" content="{{ description | safe }}" />
+  <meta name="og:image" content="{{ site.url + site.ogImage }}" />
+  <meta property="og:image:secure_url" content="{{ site.url + site.ogImage }}" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="og:locale" content="en_US" />
+  <meta property='twitter:title' content="{{ site.name }} | {{ title }}" />
+  <meta property='twitter:image' content="{{ site.url + site.ogImage }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>{{ site.name }} | {{ title }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rubik:ital,wght@1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/bundle.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+  {{ content | safe }}
+  <div class="animation">
+    <div id="an-co">
+      <div id="an-3e"></div>
+      <div id="an-00"></div>
+    </div>
+  </div>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', '{{ site.googleAnalyticsId }}', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>

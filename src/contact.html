@@ -1,0 +1,45 @@
+---
+layout: base.html
+title: Get in Touch
+description: A list of ways to get in touch with Umang
+keywords: ['get', 'in', 'touch', 'contact']
+navOrder: 4
+linksOrder: ['linkedin', 'github', 'twitter', 'stackoverflow', 'quora']
+faClasses:
+  github: github-alt
+  stackoverflow: stack-overflow
+---
+
+<div class="container">
+  <h1 class="center-text">{{ title }}</h1>
+  {% include "nav.html" %}
+  <div id="text">
+    <p>
+      Drop me an email if there is anything you would like to talk about. Could be a hello, a potential work opportunity - anything, really. You could even send memes.
+    </p>
+    <p>
+      <a href="mailto:{{ site.email }}" id="email">{{ site.email }}</a>
+    </p>
+    <p>
+      And if you'd like to <span class="strikethrough">stalk</span> follow me on social media and other websites on the Internet, here are some cool buttons that lead to my profiles.
+    </p>
+    <p style="text-align: center;">
+      {%- for link in linksOrder -%}
+        {% set faClass = link %}
+
+        {% if faClasses[link] %}
+          {% set faClass = faClasses[link] %}
+        {% endif %}
+
+        <a href="{{ site.links[link] }}" class="social" id="{{ link }}">
+          <span class="social-bg"></span>
+          <i class="fa fa-{{ faClass }}" aria-hidden="true"></i>
+        </a>
+      {%- endfor -%}
+    </p>
+    <p>
+      Oh, and here's my <a href="{{ site.links.blog }}" class="link">blog</a> ICYMI.
+    </p>
+  </div>
+</div>
+<script src="https://use.fontawesome.com/7cf5f85bf3.js"></script>

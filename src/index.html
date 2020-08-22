@@ -1,0 +1,28 @@
+---
+layout: base.html
+title: umanghome
+navTitle: Home
+description: Umang Galaiya's space on the Internet
+navOrder: 1
+---
+
+<div class="container home">
+  <div class="center-text">
+    <img class="circle" src="{{ site.profilePicture }}" id="author-img" alt="{{ site.name }}" height="200" width="200" />
+  </div>
+  <h1 class="center-text">
+    {{ site.name }}
+  </h1>
+  <h2 class="center-text">
+    {{ site.tagline }}
+  </h2>
+  <!-- <p class="center-text">
+    I'm looking for freelance gigs!
+  </p> -->
+  {% include "nav.html" %}
+  <div id="github" class="center-text" style="margin-top: 20px;">
+    <a href="{{ site.links.github }}" class="link-img">
+      <img src="img/GitHub-Mark-Light-32px.png" alt="GitHub">
+    </a>
+  </div>
+</div>

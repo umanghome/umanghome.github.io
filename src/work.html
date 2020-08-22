@@ -1,0 +1,77 @@
+---
+layout: base.html
+title: Work
+description: Umang's skills, projects, and the places he has worked at
+keywords: ['work']
+navOrder: 3
+---
+
+<div class="container">
+  <h1 class="center-text">{{ title }}</h1>
+  {% include "nav.html" %}
+  <div id="skills">
+    <div>
+      {%- for skill in work.skills -%}
+        <div>
+          <h2>{{ skill.title }}</h2>
+          <ul class="no-padding">
+            {%- for items in skill.items -%}
+              <li>{{ items | join(', ') }}</li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+  <div id="experiences">
+    <h2>{{ work.experiences.title }}</h2>
+    {%- for experience in work.experience.items -%}
+      <div class="project">
+        <h3>{{ experience.company }}</h3>
+        {%- for role in experience.roles -%}
+          {% if role.role %}
+            <h4>{{ role.role }}</h4>
+          {% endif %}
+          <small>{{ role.duration }}</small>
+          <ul>
+            {%- for item in role.work -%}
+              <li>{{ item }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endfor -%}
+        {% if experience.url %}
+          <a href="{{ experience.url }}">Visit {{ experience.linkTitle }}</a>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+  </div>
+
+
+  <div id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <p>This list isn't being kept updated. A better list can be found by looking at my GitHub profile.</p>
+      <a href="{{ site.links.github }}">Visit my GitHub</a>
+    </div>
+
+    {%- for project in work.projects -%}
+      <div class="project">
+        <h3>{{ project.title }}</h3>
+        {%- for desc in project.description -%}
+          <p>{{ desc }}</p>
+        {%- endfor -%}
+        <p>Technologies: {{ project.technologies | join(', ') }}.</p>
+
+        {% if project.url %}
+          <a href="{{ project.url }}">
+            {% if project.linkTitle %}
+              {{ project.linkTitle }}
+            {% else %}
+              See {{ project.title }}
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
