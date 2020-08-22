@@ -1,0 +1,22 @@
+{
+  "name": "umanghome.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umanghome/umanghome.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umanghome/umanghome.github.io/issues"
+  },
+  "homepage": "https://github.com/umanghome/umanghome.github.io#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
