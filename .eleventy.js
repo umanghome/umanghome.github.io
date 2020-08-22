@@ -21,6 +21,7 @@ module.exports = config => {
 
   config.addCollection('pages', collectionApi => {
     return collectionApi.getFilteredByGlob('src/*.html')
+      .filter(page => page.url !== '/hire/')
       .sort((a, b) => {
         if (a.data.navOrder < b.data.navOrder) {
           return -1;
