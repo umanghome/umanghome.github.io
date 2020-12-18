@@ -156,7 +156,7 @@ module.exports = function () {
       },
 
       {
-        title: 'IMBb Sorter',
+        title: 'IMDb Sorter',
         description: [
           'IMDb Sorter allows you to sort movies of your choice based on their IMDb Ratings.',
         ],
